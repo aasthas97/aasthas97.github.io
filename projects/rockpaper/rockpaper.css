@@ -1,0 +1,73 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: "Irish Grover", cursive;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 4%;
+}
+
+#demo {
+  font-size: 1.2em;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+button {
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 14px;
+  padding: 1%;
+  color: white;
+  font-family: "Irish Grover", cursive;
+  margin-top: 2rem;
+  font-size: 2em;
+  width: 20%;
+}
+
+button:hover {
+  background: white;
+  color: black;
+  transition: 0.5s ease-in-out;
+}
+
+#weapons {
+  display: grid;
+  max-width: 50%;
+  margin: auto;
+  margin-top: 4%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#weapons img {
+  margin: auto;
+}
+
+#weapons img:hover {
+  border: 6px solid white;
+  transition: 0.4s ease-in;
+}
+
+#weapons button {
+  background: transparent;
+  border: none;
+}
+
+#score {
+  margin: auto;
+  margin-top: 2%;
+}
+
+#score th,
+#score td {
+  font-size: 1.8em;
+  padding: 20px 40px 10px 40px;
+}
+
+#outcome {
+  margin-top: 2%;
+  font-size: 1.8em;
+}
