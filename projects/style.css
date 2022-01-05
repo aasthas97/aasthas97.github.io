@@ -1,0 +1,67 @@
+body {
+  margin: 5vh 12vw 0 12vw;
+}
+
+#header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header-container a {
+  color: black;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  margin-right: 50px;
+}
+
+hr {
+  opacity: 0.2;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Work Sans", sans-serif;
+  /* opacity: 0.6; */
+  text-shadow: 4px 4px grey;
+}
+
+p {
+  line-height: 1.5em;
+  font-family: "Work Sans";
+}
+
+#project-board {
+  display: grid;
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: 4vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.5em;
+  grid-row-gap: 2em;
+}
+
+#project-board a {
+  text-decoration: none;
+  color: black;
+}
+
+.project-card {
+  text-align: center;
+}
+
+.project-card p {
+  font-family: monospace;
+  font-size: 1.3em;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: justify;
+}
+
+.project-card:hover {
+  box-shadow: 0px 8px grey;
+  transition: 0.4s ease-in-out;
+}
