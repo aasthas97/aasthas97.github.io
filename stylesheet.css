@@ -1,0 +1,103 @@
+body {
+  font-family: "Alata";
+}
+header {
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  list-style-type: none;
+  justify-content: center;
+  display: flex;
+  width: 100vw;
+}
+
+header a {
+  color: #007bff;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.25rem;
+  margin-left: 4em;
+}
+
+main {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+main p {
+  font-family: "Alegreya", serif;
+  color: #000;
+  font-weight: 400;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+h1 {
+  color: #343a40;
+  padding-top: 20px;
+}
+
+a {
+  color: #007bff;
+  font-weight: 500;
+  line-height: 2;
+}
+
+#skill-board {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: space-evenly;
+}
+
+.skill-cell {
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-rows: 50% 50%;
+  justify-items: center;
+}
+
+.skill-cell img {
+  /* border: 1px solid red; */
+  height: 70px;
+  width: 70px;
+}
+
+.skill-cell p {
+  /* border: 1px solid black; */
+  margin-top: 5px;
+}
+
+@media (max-width: 700px) {
+  header {
+    margin: auto;
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    list-style-type: none;
+  }
+
+  header a {
+    margin-left: 1em;
+    font-size: 1.2rem;
+    margin: 10px;
+    text-align: center;
+  }
+
+  main {
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  main p {
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
