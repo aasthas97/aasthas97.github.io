@@ -1,2 +1,3 @@
-# aasthas97.github.io
-Public website
+# Personal website
+
+Personal website hosted on GitHub pages.
