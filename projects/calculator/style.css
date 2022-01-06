@@ -1,0 +1,29 @@
+#calculator-main {
+  border: 2px solid black;
+  border-radius: 5%;
+  width: 20vw;
+  margin: auto;
+  margin-top: 10vh;
+  padding: 30px;
+}
+
+#calc-board {
+  margin: auto;
+}
+
+#calc-display {
+  background-color: slategray;
+}
+
+.calc-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc-key {
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
