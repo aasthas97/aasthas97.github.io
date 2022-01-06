@@ -1,15 +1,39 @@
 var playerScore = 0;
 var computerScore = 0;
+let outcomeHistory = [];
+let moveHistory = [];
 
-function computerPlay() {
-  const moves = ["rock", "paper", "scissors"];
-  let move_picker = Math.floor(Math.random() * 3);
-  let computerMove = moves[move_picker];
+function computerPlay(lastOutcome = 0, lastMove = undefined) {
+  let moves = ["rock", "paper", "scissors"];
+  if (lastOutcome == 0) {
+    let move_picker = Math.floor(Math.random() * 3);
+    var computerMove = moves[move_picker];
+  } else if (lastOutcome == 1) {
+    // computer lost the last time
+    var filteredMoves = moves.filter((e) => e !== lastMove);
+    console.log(filteredMoves);
+    let move_picker = Math.floor(Math.random() * 2);
+    var computerMove = filteredMoves[move_picker];
+  } else if (lastOutcome == -1) {
+    // computer won the last time
+    var computerMove = lastMove;
+  }
+
   return computerMove;
 }
 
 function playOneRound(playerMove) {
-  let computerMove = computerPlay();
+  if (outcomeHistory.length == 0) {
+    // this is the first move
+    var computerMove = computerPlay();
+  } else {
+    // this is not the first move
+    let lastMove = moveHistory[moveHistory.length - 1];
+    let lastOutcome = outcomeHistory[outcomeHistory.length - 1];
+    var computerMove = computerPlay(lastOutcome, lastMove);
+  }
+  moveHistory.push(computerMove);
+
   let outcome, points;
 
   if (playerMove == computerMove) {
@@ -44,6 +68,8 @@ function playOneRound(playerMove) {
       points = -1;
     }
   }
+
+  outcomeHistory.push(points);
   displayOutcome(outcome);
   updateScore(points);
   checkGameEnd();
