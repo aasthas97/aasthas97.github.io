@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="script.js"></script>
+    <title>Kaffee in Berlin</title>
+  </head>
+  <body>
+    <header>
+      <div id="top">
+        <h1>Berlin, Caffeinated.</h1>
+        <div id="header-links">
+          <a href="#cafes">some coffee</a>
+          <a href="#quote">some words</a>
+          <a href="#footer">some design</a>
+        </div>
+      </div>
+      <div id="header-content">
+        <div>
+          <h1>What is this?</h1>
+          <p>
+            Reviewing the cafes I visit in Berlin. Most of them are in and
+            around Friedrichshain. I usually order a single coffee and either a
+            croissant or dessert. I am not a coffee expert, by any means. Nor am
+            I a very eloquent reviewer. I simply enjoy drinking coffee and
+            documenting my experience.
+          </p>
+          <p>
+            PS. I am also slowly learning German and will try to add
+            translations soon. :)
+          </p>
+        </div>
+        <img
+          src="./images/img-coffee-header.jpg"
+          alt="image of a hand holding a cup of coffee and pouring milk into it"
+        />
+      </div>
+    </header>
+    <section id="cafes">
+      <h1>Cafes</h1>
+      <div id="cafe-container">
+        <div class="cafe-item" id="cafe-nook">
+          <img class="cafe-img" src="./images/cafeNook.jpeg" />
+          <div class="cafe-details">
+            <p>Cafe Nook<br />Hans-Otto-Straße 6, 10407</p>
+          </div>
+        </div>
+        <div class="cafe-item" id="zazza">
+          <img class="cafe-img" src="./images/zazza.jpeg" />
+          <div class="cafe-details">
+            <p>Zazza Moabit<br />Lehrter Straße 24e, 10557</p>
+          </div>
+        </div>
+        <div class="cafe-item" id="kala">
+          <img class="cafe-img" src="./images/no_photo.jpg" />
+          <div class="cafe-details">
+            <p>Kala Cafe<br />Warschauer Straße 71, 10243</p>
+          </div>
+        </div>
+        <div class="cafe-item" id="lieblings">
+          <img class="cafe-img" src="./images/no_photo.jpg" />
+          <div class="cafe-details">
+            <p>K Lieblings<br />Karl-Marx-Allee 136, 10243</p>
+          </div>
+        </div>
+        <div class="cafe-item" id="bonpland">
+          <img class="cafe-img" src="./images/bonpland.jpeg" />
+          <div class="cafe-details">
+            <p>Bonpland Coffee<br />Proskauer Straße 34, 10247</p>
+          </div>
+        </div>
+        <div class="cafe-item" id="boxi">
+          <img class="cafe-img" src="./images/boxi.jpeg" />
+          <div class="cafe-details">
+            <p>Boxi Espresso<br />Boxhagener Straße 12, 10245</p>
+          </div>
+        </div>
+        <div class="cafe-item" id="s-and-s">
+          <img class="cafe-img" src="./images/s_and_s.jpeg" />
+          <div class="cafe-details">
+            <p>Shakespeare & Sons<br />Warschauer Straße 74, 10243</p>
+          </div>
+        </div>
+        <div
+          class="cafe-item"
+          id="nineteengrams"
+          onclick="showReview('nineteengrams')"
+        >
+          <img class="cafe-img" src="./images/19grams.jpeg" />
+          <div class="cafe-details">
+            <p>19Grams Alexanderplatz<br />Karl-Liebknecht-Straße 13, 10178</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="quote">
+      <p>
+        “Police work wouldn't be possible without coffee," Wallander said. "No
+        work would be possible without coffee." They pondered the importance of
+        coffee in silence.”<br />― Henning Mankell, One Step Behind
+      </p>
+    </div>
+  </body>
+  <footer>
+    <p>
+      This design was taken from The Odin Project's
+      <a href="https://www.theodinproject.com/lessons/foundations-landing-page"
+        >Landing Page assignment</a
+      >. I took some creative liberties of my own. The page does not look great
+      on a phone. I need to work on that. :)
+    </p>
+  </footer>
+</html>
