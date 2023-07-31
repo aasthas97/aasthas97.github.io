@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth;
+  background-color: #070200;
+}
+
+header {
+  size: clamp(3rem, calc(3rem + 10vw), 20rem);
+}
+
+header h1 {
+  color: #ffbb00;
+  line-height: 1.1;
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+}
+
+#body-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#grid-container {
+  height: 800px;
+  width: 800px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#controls {
+  border: 1px solid #b12292;
+  width: 400px;
+  font-family: "Inconsolata", monospace;
+  color: #ffbb00;
+  text-align: center;
+}
+
+.sketch-row {
+  height: 50x;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sketch-col {
+  height: 50px;
+  width: 50px;
+}
