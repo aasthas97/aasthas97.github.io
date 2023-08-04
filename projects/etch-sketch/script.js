@@ -27,8 +27,7 @@ function ChangeColour() {
 }
 
 function sketch() {
-  this.style.backgroundColor =
-    this.style.backgroundColor == drawColor ? gridColor : drawColor;
+  this.style.backgroundColor = drawColor;
 }
 
 function DrawGrid(gridSize) {
