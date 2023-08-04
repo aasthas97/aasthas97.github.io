@@ -1,22 +1,20 @@
 const container = document.querySelector("#grid-container");
-var invert = true;
+var chosenColor = "rgb(177, 34, 146)";
 
-for (let row = 0; row < 16; row++) {
-  let row_div = document.createElement("div");
-  row_div.setAttribute("class", "sketch-row");
-
-  for (let col = 0; col < 16; col++) {
-    let col_div = document.createElement("div");
-    col_div.setAttribute("class", "sketch-col");
-
-    // set color
-    if ((col % 2 == 0 && row % 2 == 0) | (col % 2 != 0 && row % 2 != 0)) {
-      col_div.style.backgroundColor = "white";
-    } else {
-      col_div.style.backgroundColor = "pink";
-    }
-
-    row_div.appendChild(col_div);
-  }
-  container.appendChild(row_div);
+function changeColor() {
+  this.style.backgroundColor =
+    this.style.backgroundColor == chosenColor ? "whitesmoke" : chosenColor;
 }
+
+for (let boxNumber = 0; boxNumber < 256; boxNumber++) {
+  let sketchBox = document.createElement("div");
+  sketchBox.setAttribute("class", "sketch-box");
+  sketchBox.addEventListener("click", changeColor);
+  container.appendChild(sketchBox);
+}
+
+/// TODO
+// 1. Add grid size selector
+// 2. Add color selector
+// 3. Clear all/reset option
+// 4. Define colors as CSS variables
