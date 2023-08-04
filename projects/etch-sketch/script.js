@@ -37,7 +37,7 @@ function DrawGrid(gridSize) {
     sketchBox.style.width = boxSize + "px";
     sketchBox.style.height = boxSize + "px";
     sketchBox.setAttribute("class", "sketch-box");
-    sketchBox.addEventListener("click", sketch);
+    sketchBox.addEventListener("mouseover", sketch);
     container.appendChild(sketchBox);
   }
 }
