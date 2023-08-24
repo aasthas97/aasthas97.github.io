@@ -13,6 +13,8 @@
 
 #calc-display {
   background-color: slategray;
+  width: 100%;
+  height: 15%;
 }
 
 .calc-row {
