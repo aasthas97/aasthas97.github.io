@@ -32,3 +32,15 @@ header h1 {
     margin-top: 5vw;
     font-size: 2rem;
 }
+
+@media only screen and (max-width: 800px) {
+    #game-grid{
+        width: 60vw;
+        height: 60vw;
+        padding-top: 1vh;
+    }
+
+    .game-box{
+        width: 31.5%;
+    }
+}
