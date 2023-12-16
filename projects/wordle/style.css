@@ -1,0 +1,16 @@
+.gameDiv{
+display: grid;
+margin: auto;
+padding-top: 15vh;
+width: 40vw;
+height: 60vh;
+}
+
+.gameRow{
+    display: flex;
+}
+
+.letter {
+    border: 1px dotted black;
+    width: 20%;
+}
