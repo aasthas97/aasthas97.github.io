@@ -4,7 +4,8 @@ class Cafe {
       this.address = address,
       this.imageSrc = img,
       this.rating = rating,
-      this.review = review
+      this.review = review,
+      this.reviewDisplayed = false;
     }
 
     getImagePath(){
