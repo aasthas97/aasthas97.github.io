@@ -131,6 +131,12 @@ header {
   border-radius: 3%;
 }
 
+.cafe-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 footer {
   text-align: center;
   font-size: 12px;

@@ -26,8 +26,18 @@ function createReviewCard(cafeObject){
   // Cafe Rating and Review
   let reviewDiv = document.createElement("div");
   reviewDiv.className = "cafe-review";
-  let reviewText = document.createElement("p");
-  reviewText.innerHTML=`<b>Rating:</b> ${cafeObject.rating}<br /><b>Review:</b>${cafeObject.review}`;
+  
+  const ratingHeading = document.createElement("h3");
+  ratingHeading.innerText = "Rating";
+  reviewDiv.appendChild(ratingHeading);
+  const ratingText = document.createElement("p");
+  ratingText.innerText = `${cafeObject.rating}`;
+  reviewDiv.appendChild(ratingText);
+  const reviewHeading = document.createElement("h3")
+  reviewHeading.innerText = "Review";
+  reviewDiv.appendChild(reviewHeading);
+  const reviewText = document.createElement("p");
+  reviewText.innerText = `${cafeObject.review}`;  
   reviewDiv.appendChild(reviewText);
   return reviewDiv;
 }
