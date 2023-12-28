@@ -134,7 +134,19 @@ header {
 .cafe-review {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 20rem;
+}
+
+.cafe-review p {
+  margin: 0;
+  padding: 0;
+}
+
+.cafe-review h1 {
+  margin: 0;
+  padding: 0;
 }
 
 footer {
