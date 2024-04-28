@@ -1,82 +1,75 @@
-@keyframes link-hover {
-  from {
-    color: white;
-  }
-  to {
-    color: #ffbb00;
-  }
+:root {
+  --white: #fff;
+  --text: #333;
+  --font-size-regular: 1.3em;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*, *::after, *::before{
+  box-sizing: inherit;
 }
 
 body {
-  font-family: "Inconsolata", monospace;
-  background-color: #060606;
-  background-attachment: fixed;
-  background-repeat: repeat;
-  background-image: url("https://raw.githubusercontent.com/RVCC-IDMX/style-stage-ericbrown8787/219962e8bec57cbe719315ecc4a24e6c62ac2c2f/circuits.svg");
+  background-color: var(--white);
+  color: var(--text);
+  font-family: serif;
+  line-height: 1.8em;
+  padding: 1em;
 }
 
-header {
-  margin-bottom: 1.5rem;
-  margin-top: 2rem;
-  list-style-type: none;
-  justify-content: center;
+.wrapper {
+  max-width: 60em;
+  margin:auto;
+}
+
+.website-header {
   display: flex;
-  padding: 1rem;
-  border-radius: 8px;
-  min-height: 10vh;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-header a {
-  color: #fff;
-  font-variation-settings: "wght" 650, "wdth" 120;
-  font-weight: 800;
-  line-height: 1.2;
-  font-size: clamp(0.8rem, calc(0.8rem + 1vw), 1.5rem);
-  text-transform: lowercase;
+.website-header a {
+  color: inherit;
+}
 
+.website-header nav {
+  text-align: right;
+  flex-grow: 1;
+  align-self: center;
+}
+
+.website-header nav a {
+  margin-left: 1em;
+}
+
+.website-title {
+  font-size: 28px;
+  font-weight: bolder;
   text-decoration: none;
-}
-
-header a:hover,
-main a:hover {
-  color: #ffbb00;
-  animation-name: link-hover;
-  animation-duration: 1s;
-}
-
-header a::after {
-  content: " }";
-  white-space: nowrap;
-}
-
-header a::before {
-  content: "{ ";
-  white-space: nowrap;
+  flex-grow: 2;
 }
 
 main {
-  width: 50vw;
-  margin: 0 auto;
-  color: #fff;
-}
-
-main p {
-  font-weight: 400;
-  font-size: 1.1em;
-  line-height: 1.5;
-}
-
-main a {
-  color: #b12292;
-  text-decoration: none;
-  font-weight: 800;
+  width: 75%;
+  margin: 5em;
 }
 
 h1 {
-  padding-top: 20px;
-  color: beige;
+  line-height: 1.2rem;
+}
+
+main nav ul a {
+  color: inherit;
+}
+
+footer {
+  text-align: center;
+  font-style: normal;
+  font-family: monospace;
 }
 
 @media (max-width: 700px) {
