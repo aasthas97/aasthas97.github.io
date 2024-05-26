@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -19,8 +19,32 @@ class Book(db.Model):
 @app.route('/', methods=['POST', 'GET'])
 
 def index():
-    return render_template('index.html')
+    if request.method == 'POST':
+        book_title = request.form['title']
+        book_author = request.form['author']
+        # book_read = request.form['status'] TODO: Fix error when checkbox not checked
+        
+        new_book = Book(title=book_title, author=book_author)
+        try:
+            db.session.add(new_book)
+            db.session.commit()
+            return redirect('/')
+        except:
+            return "Book could not be added. Check browser console for details"
+    
+    else:
+        books = Book.query.order_by(Book.added_on).all()
+        return render_template('index.html', books=books)
 
+@app.route('/delete/<int:id>')
+def deleteBook(id):
+    book_to_delete = Book.query.get_or_404(id)
+    try:
+        db.session.delete(book_to_delete)
+        db.session.commit()
+        return redirect('/')
+    except:
+        return "Book could not be deleted."
 
 if __name__ == "__main__":
     app.run(debug=True)

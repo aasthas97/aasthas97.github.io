@@ -16,16 +16,19 @@
     <form action="/" method="POST">
         <div id="add-book">
             <label for="title">Title</label>
-            <input id="title" type="text" placeholder="Book title">
+            <input name="title" type="text" placeholder="Book title">
             <label for="author">Author</label>
-            <input id="author" type="text" placeholder="Author">
+            <input name="author" type="text" placeholder="Author">
             <label for="status">Read?</label>
-            <input id="status" type="checkbox">       
+            <input name="status" type="checkbox">       
         </div>
         <input id="add" type="submit" value="Add to Library"> 
     </form>
 
     <div id = "view-books">
+        {% if books|length < 1 %}
+            <p>No books yet. Add one!</p>
+        {% else %}
         <table id="library-table">
             <thead>
                 <tr>
@@ -35,10 +38,22 @@
                     <th>Remove</th>
                 </tr>
                 <tbody id="library-table-body">
-
+                    {% for book in books %}
+                    <tr>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.status }}</td>
+                        <td>
+                            <button class="delete">
+                                <a href="/delete/{{book.id}}">Remove</a>
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
                 </tbody>
             </thead>
         </table>
+        {% endif %}
     </div>
       
 </body>
