@@ -1,24 +1,22 @@
 var myLibrary = [];
 
-function Book(title, author, pages, read) {
+function Book(title, author, read) {
   this.title = title;
   this.author = author;
-  this.pages = pages;
   this.read = read;
 }
 
 function addBookToLibrary() {
     const title = document.getElementById("title").value;
     const author = document.getElementById('author').value;
-    const pages = document.getElementById('pages').value;
     const read = document.getElementById('status').checked;
 
-    if (title=="" || author == "" || pages <= 0){
+    if (title=="" || author == ""){
         alert("Invalid entry");
     } else if (myLibrary.some(u=>u.title === title)) {
         alert("This book already exists.");
     } else {
-        let newBook = new Book(title, author, pages, read);
+        let newBook = new Book(title, author, read);
         myLibrary.push(newBook);
         updateDisplay(newBook);
     }
@@ -55,7 +53,6 @@ function updateDisplay(book) {
         
     const title = document.createElement('td');
     const author = document.createElement('td');
-    const pages = document.createElement('td');
     const readStatus = document.createElement('td');
     const rmBtn = document.createElement('td');
     
@@ -67,7 +64,6 @@ function updateDisplay(book) {
 
     title.textContent = book.title;
     author.textContent = book.author;
-    pages.textContent = book.pages;
     readBtn.textContent = (book.read === true) ? 'Read' : 'Unread';
     readBtn.classList.add("read-button");
     readBtn.id = (book.read === true) ? 'btn-read' : 'btn-unread';
@@ -79,7 +75,6 @@ function updateDisplay(book) {
     
     newRow.appendChild(title);
     newRow.appendChild(author);
-    newRow.appendChild(pages);
     newRow.appendChild(readStatus);
     newRow.appendChild(rmBtn);
     table.appendChild(newRow);

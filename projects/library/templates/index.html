@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <title>The Odin Library</title>
+    <title>Kitaabgaah</title>
     
 </head>
 <body>
-    <h1>The Odin Library 📚</h1>
-    <p>Welcome to the Odin Library Tracker. Keep track of your books here - the read, the unread. the unreadable. We don't judge!</p>
-
-    <form>
+    <h1>KMA Kitaabkhaana 📚</h1>
+    <p>Welcome to the KMA Kitaabkhaana. I keep a record of my books here - the read, the unread, the unreadable. </p>
+    
+    <form action="/" method="POST">
         <div id="add-book">
-            <label for="title">Book Title</label>
+            <label for="title">Title</label>
             <input id="title" type="text" placeholder="Book title">
             <label for="author">Author</label>
             <input id="author" type="text" placeholder="Author">
-            <label for="pages">Pages</label>
-            <input id="pages" type="number" placeholder="">
             <label for="status">Read?</label>
             <input id="status" type="checkbox">       
         </div>
+        <input id="add" type="submit" value="Add to Library"> 
     </form>
-    <button id="add" onclick="addBookToLibrary()">Add to Library</button>
 
     <div id = "view-books">
         <table id="library-table">
@@ -33,7 +31,6 @@
                 <tr>
                     <th>Title</th>
                     <th>Author</th>
-                    <th>Pages</th>
                     <th>Status</th>
                     <th>Remove</th>
                 </tr>
@@ -46,8 +43,7 @@
       
 </body>
 </html>
-<script src='script.js'></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 <script>
     displayBooks();
-    
 </script>
