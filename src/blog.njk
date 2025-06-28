@@ -1,0 +1,17 @@
+---
+title: Things I've Written
+layout: 'base.njk'
+---
+
+<main>
+  <h1>Writing</h1>
+  <p>I do not write as well or as often as I would like. Nonetheless, I have put some things here for the readers' perusal. If you're taking the time to read them, I sincerely hope you enjoy.</p>
+  <ul style="line-height: 200%">
+  
+  {%- for blogpost in collections.blogpost -%}
+  <li><a href="{{ blogpost.url }}">{{ blogpost.data.title }}</a>: {{ blogpost.data.description }}</li>
+  {%- endfor %}
+
+  </ul>
+</main>
+  

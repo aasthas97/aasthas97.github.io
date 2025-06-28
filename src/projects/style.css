@@ -1,0 +1,41 @@
+body {
+  font-family: "Inconsolata", monospace;
+  background-color: #060606;
+  width: 50vw;
+  margin: 0 auto;
+  color: #fff;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-image: url("https://raw.githubusercontent.com/RVCC-IDMX/style-stage-ericbrown8787/219962e8bec57cbe719315ecc4a24e6c62ac2c2f/circuits.svg");
+}
+
+hr {
+  opacity: 0.2;
+}
+
+#projects a {
+  color: #ffbb00;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+#projects a::after {
+  content: " }";
+  white-space: nowrap;
+}
+
+#projects a::before {
+  content: "{ ";
+  white-space: nowrap;
+}
+
+#projects a:hover {
+  margin-left: 5px;
+  transition: 0.4s ease-in-out;
+}
+
+@media (max-width: 700px) {
+  body {
+    width: 90vw;
+  }
+}

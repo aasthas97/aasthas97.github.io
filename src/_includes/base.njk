@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <link rel="canonical" href="https://aastha.sh/" />
+    <meta name="author" content="Aastha Sharma" />
+    <meta
+      name="description"
+      content="Homepage of the chronically online Aastha Sharma, who has not yet learned to write good self-descriptions."
+    />
+    <meta property="og:title" content="Home" />
+    <meta property="og:url" content="https://aastha.sh/" />
+    <link rel="stylesheet" href="/stylesheet.css" />
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      {% include 'header.njk' %}
+      {{ content | safe }}
+    </div>
+    
+    {% include 'footer.njk' %}
+  </body>
+</html>
