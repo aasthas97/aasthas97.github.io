@@ -1,0 +1,19 @@
+---
+title: Books I've Read
+layout: 'base.njk'
+---
+
+<main>
+  <h1>Read</h1>
+  <p>I love reading fiction. Every year, I make a promise to read more non-fiction and every year, I fail to deliver.</p>
+  <ul style="line-height: 200%">
+  
+  {%- for book in collections.books -%}
+  <li><a href="{{ book.url }}">{{ book.data.title }} by {{ book.data.author }}</a></li>
+  {%- endfor %}
+
+  </ul>
+
+  Some other books that I read but did not feel particularly inclined to write about were: Red Mars, Chhaunk
+</main>
+  
