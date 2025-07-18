@@ -1,7 +1,7 @@
 ---
 title: Graduating
 date: 2021-12-30
-description: I received a graduate degree in December 2021 and wrote about it
+description: where I travel to Kanpur and receive a degree certificate
 ---
 
 # Graduating
