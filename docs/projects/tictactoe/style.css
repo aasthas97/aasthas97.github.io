@@ -1,0 +1,46 @@
+body{
+    background-color: #232645;
+    font-family: 'Barriecito', serif;
+    color: whitesmoke;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+#game-grid{
+    display: flex;
+    flex-flow: row wrap;
+    width: 30vw;
+    height: 30vw;
+    margin: auto;
+    padding-top: 3vw;
+}
+
+.game-box{
+    border: 1px solid #696a82;
+    width: 32.5%;
+    height: 33%;
+}
+
+.game-box h1{
+    font-size: 3rem;
+}
+
+#result {
+    margin-top: 5vw;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    #game-grid{
+        width: 60vw;
+        height: 60vw;
+        padding-top: 1vh;
+    }
+
+    .game-box{
+        width: 31.5%;
+    }
+}
