@@ -1,5 +1,5 @@
 ---
-title: I moved to Berlin: Part One
+title: I moved to Berlin (Part One)
 date: 2022-05-31
 description: I moved to Berlin!
 ---

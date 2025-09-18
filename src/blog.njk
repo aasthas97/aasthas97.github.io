@@ -9,7 +9,7 @@ layout: 'base.njk'
   <ul style="line-height: 200%">
   
   {%- for blogpost in collections.blogpost -%}
-  <li><a href="{{ blogpost.url }}">{{ blogpost.data.title }}</a>: {{ blogpost.data.description }}</li>
+  <li><a href="{{ blogpost.url }}">{{ blogpost.data.title }}</a></li>
   {%- endfor %}
 
   </ul>
