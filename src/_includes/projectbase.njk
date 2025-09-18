@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }}</title>
+    <link rel="canonical" href="https://aastha.sh/projects" />
+    <meta name="author" content="Aastha Sharma" />
+    <meta
+      name="description"
+      content="Litle programming nuggets"
+    />
+    <meta property="og:title" content="Home" />
+    <meta property="og:url" content="https://aastha.sh/projects" />
+    <link rel="stylesheet" href="/projectstyle.css" />
+    <link rel="stylesheet" href="/stylesheet.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  
+  <body class="projectbody">
+    {% include 'header.njk' %}
+
+    <main>
+      {% if projects | length %}
+        <ol id="projects">
+          {% for p in projects %}
+            <li>
+              <h3>{{ p.name }}</h3>
+              <p>
+                {{ p.description | safe }}
+                {% if p.codeUrl %}
+                  <a href="{{ p.codeUrl }}" target="_blank" rel="noopener">Code</a>
+                {% endif %}
+                {% if p.liveUrl %}
+                  <a href="{{ p.liveUrl }}" target="_blank" rel="noopener">Live preview</a>
+                {% endif %}
+              </p>
+            </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        {{ content | safe }}
+      {% endif %}
+    </main>
+
+    {% include 'footer.njk' %}
+  </body>
+</html>
