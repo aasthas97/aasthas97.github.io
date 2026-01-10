@@ -3,8 +3,8 @@ let drawColor;
 
 const container = document.querySelector("#grid-container");
 const colorPicker = document.getElementById("color-picker");
-const sizePicker = document.getElementById("size-picker");
 
+// Helper function to convert hex to RGB color values
 function hexToRgb(hex) {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result
@@ -16,13 +16,23 @@ function hexToRgb(hex) {
     : null;
 }
 
-function ChangeSize() {
-  gridSize = sizePicker.value;
-  Reset(gridSize);
+// Change size of the drawing grid based on a user-entered input
+// Size cannot be less than 10x10 or more than 50x50
+function ChangeSize(newSize) {
+  if (newSize > 50){
+    newSize = 50;
+  }
+  else if (newSize < 10){
+    newSize = 10;
+  }
+
+  Reset(newSize);
 }
 
-function ChangeColour() {
-  var foo = hexToRgb(colorPicker.value);
+// Change pen color
+function ChangeColour(hexColor) {
+  console.log(hexColor);
+  var foo = hexToRgb(hexColor);
   drawColor = `rgb(${foo.r}, ${foo.g}, ${foo.b})`;
 }
 
@@ -30,6 +40,7 @@ function sketch() {
   this.style.backgroundColor = drawColor;
 }
 
+// Create drawing board and attach event handlers
 function DrawGrid(gridSize) {
   boxSize = 800 / gridSize;
   for (let boxNumber = 0; boxNumber < gridSize ** 2; boxNumber++) {
@@ -37,11 +48,12 @@ function DrawGrid(gridSize) {
     sketchBox.style.width = boxSize + "px";
     sketchBox.style.height = boxSize + "px";
     sketchBox.setAttribute("class", "sketch-box");
-    sketchBox.addEventListener("mouseover", sketch);
+    sketchBox.addEventListener("mousedown", sketch);
     container.appendChild(sketchBox);
   }
 }
 
+// Reset grid size and color, redraw the grid
 function Reset(gridSize) {
   container.innerHTML = "";
   container.style.backgroundColor = gridColor;
@@ -51,9 +63,3 @@ function Reset(gridSize) {
 }
 
 Reset(16);
-
-/// TODO
-// 4. Define colors as CSS variables
-// 5. Make jS concise
-// 6. Draw by click and drag
-// 7. Make phone-friendly
