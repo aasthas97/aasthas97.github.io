@@ -20,13 +20,19 @@
           id="size-picker"
           min="10"
           max="50"
-          onchange="ChangeSize()"
+          onchange="ChangeSize(this.value)"
         />
         <p style="justify-self: start; align-self: center">Color</p>
-        <input type="color" id="color-picker" onchange="ChangeColour()" />
-        <button style="justify-self: end" onclick="Reset(16)">
-          <p>Reset</p>
-        </button>
+        <input type="color" id="color-picker" onchange="ChangeColour(this.value)" />
+
+        <div style="grid-column: 1 / -1; display: flex; justify-content: space-around">
+          <button onclick="Reset(16)">
+            <p>Delete All</p>
+          </button>
+          <button onclick="ChangeColour('#f5f5f5')">
+            <p>Erase</p>
+          </button>
+        </div>
       </div>
       <div id="grid-container"></div>
     </div>
