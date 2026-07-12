@@ -1,5 +1,25 @@
 [
   {
+    "date": "07/2026",
+    "author": "Caro Claire Burke",
+    "title": "Yesteryear"
+  },
+  {
+    "date": "06/2026",
+    "author": "Daanika Kamal",
+    "title": "Feminisms of our Mothers"
+  },
+  {
+    "date": "06/2026",
+    "author": "James Baldwin",
+    "title": "Giovanni's Room"
+  },
+  {
+    "date": "05/2026",
+    "author": "Négar Djavadi",
+    "title": "Disoriental"
+  },
+  {
     "date": "05/2026",
     "author": "Yōko Ogawa",
     "title": "The Housekeeper and the Professor"
@@ -103,10 +123,5 @@
     "date": "07/2025",
     "author": "Hansda Sowvendra Shekhar",
     "title": "My Father’s Garden"
-  },
-  {
-    "date": "06/2025",
-    "author": "Kim Stanley Robinson",
-    "title": "Red Mars"
   }
 ]
