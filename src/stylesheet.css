@@ -1,5 +1,6 @@
 :root {
   --white: #fff;
+  --background: #ededed;
   --text: #333;
   --font-size-regular: 1.3em;
 }
@@ -13,9 +14,9 @@ html{
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--background);
   color: var(--text);
-  font-family: serif;
+  font-family: 'Lato';
   line-height: 1.8em;
   padding: 1em;
 }
